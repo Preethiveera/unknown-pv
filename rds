@@ -1,0 +1,21 @@
+resouce "pcms-mod-dev-usw2-pgsql" {
+  source = "https://us-west-2.console.aws.amazon.com/rds/home?region=us-west-2#databases:"
+  vpc_id = "vpc-0d392828446a85b26"
+  allocated_storage = "20"
+  engine_version = "13.3"
+  instance_type = "db.m5.large"
+  storage_type = "gp2"
+  database_identifier = "pcms-mod-poc-pgsql"
+  database_name = "pcmsdb"
+  database_username = "pcmsdbuser"
+  database_password = "secret"
+  database_port = "5432"
+  auto_minor_version_upgrade = true
+  multi_availability_zone = false
+  storage_encrypted = false
+  subnet_group = "default-vpc-0d392828446a85b26"
+  monitoring_interval = "60"
+  deletion_protection = true
+  project = "pcms"
+  environment = "dev"
+}
